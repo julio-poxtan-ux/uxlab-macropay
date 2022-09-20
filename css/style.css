@@ -964,7 +964,7 @@ body.dark .edrea_about {
 }
 
 .edrea_about .content .edrea_title {
-    max-width: 600px;
+    max-width: 49vw;
     margin: 0;
     padding: 0;
     float: none;
@@ -1232,8 +1232,8 @@ body.dark .edrea_about {
 }
 
 .edrea_information .info_right {
-    width: 35vw;
-    /*padding-left: 60px;*/
+    width: 45vw;
+    padding-left: 60px;
     float: left;
 }
 
