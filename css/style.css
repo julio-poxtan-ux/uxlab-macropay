@@ -26,6 +26,9 @@
 li.info-tipos h5{
     line-height: 2;
 }
+.m-t{
+    margin-top: 4rem;
+}
 
 html {
     overflow-x: hidden;
@@ -587,8 +590,8 @@ h6 {
 }
 
 .edrea_prevnext a:hover {
-    color: #dd4242;
-    border-color: #dd4242;
+    color: #000000;
+    border-color: #000000;
 }
 
 .edrea_prevnext a:after {
