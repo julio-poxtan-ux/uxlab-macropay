@@ -1,7 +1,8 @@
 @charset "utf-8";
+
 /* Dark Version of the template */
 body.dark #preloader:before,
-body.dark #preloader:after{
+body.dark #preloader:after {
     content: '';
     position: absolute;
     left: 0;
@@ -14,11 +15,13 @@ body.dark #preloader:after{
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
 }
-body.dark #preloader:after{
+
+body.dark #preloader:after {
     left: auto;
     right: 0;
 }
-body.dark .loader_line:before{
+
+body.dark .loader_line:before {
     content: '';
     position: absolute;
     left: 0;
@@ -34,7 +37,8 @@ body.dark .loader_line:before{
     -o-animation: lineheight 1000ms ease-in-out 0s forwards;
     animation: lineheight 1000ms ease-in-out 0s forwards;
 }
-body.dark .loader_line:after{
+
+body.dark .loader_line:after {
     content: '';
     position: absolute;
     left: 0;
@@ -51,184 +55,241 @@ body.dark .loader_line:after{
     animation: lineround 1200ms linear 0s infinite;
     animation-delay: 2000ms;
 }
-body.dark{
-	background-color: #111319;
-	color: #A9AFC3;
+
+body.dark {
+    background-color: #000000;
+    color: #A9AFC3;
 }
+
 body.dark::-webkit-scrollbar {
-  width: 11px;
+    width: 11px;
 }
-body.dark{
-  scrollbar-width: thin;
-  scrollbar-color: #333 #111;
+
+body.dark {
+    scrollbar-width: thin;
+    scrollbar-color: #333 #111;
 }
+
 body.dark::-webkit-scrollbar-track {
-  background: #111;
+    background: #111;
 }
+
 body.dark::-webkit-scrollbar-thumb {
-  background-color: #333;
-  border-radius: 6px;
-  border: 3px solid #111;
+    background-color: #333;
+    border-radius: 6px;
+    border: 3px solid #111;
 }
-body.dark .edrea_modalbox .modal_content::-webkit-scrollbar{
-  width: 11px;
+
+body.dark .edrea_modalbox .modal_content::-webkit-scrollbar {
+    width: 11px;
 }
-body.dark .edrea_modalbox .modal_content{
-  scrollbar-width: thin;
-  scrollbar-color: #333 #111;
+
+body.dark .edrea_modalbox .modal_content {
+    scrollbar-width: thin;
+    scrollbar-color: #333 #111;
 }
-body.dark .edrea_modalbox .modal_content::-webkit-scrollbar-track{
-  background: #111;
+
+body.dark .edrea_modalbox .modal_content::-webkit-scrollbar-track {
+    background: #111;
 }
-body.dark .edrea_modalbox .modal_content::-webkit-scrollbar-thumb{
-  background-color: #333;
-  border-radius: 6px;
-  border: 3px solid #111;
+
+body.dark .edrea_modalbox .modal_content::-webkit-scrollbar-thumb {
+    background-color: #333;
+    border-radius: 6px;
+    border: 3px solid #111;
 }
-@media(max-width: 768px){
-	body.dark .edrea_modalbox .close{background-color: #111319;}
+
+@media(max-width: 768px) {
+    body.dark .edrea_modalbox .close {
+        background-color: #111319;
+    }
 }
+
 body.dark h1,
 body.dark h2,
 body.dark h3,
 body.dark h4,
 body.dark h5,
-body.dark h6{
-	color: #fff;
+body.dark h6 {
+    color: #fff;
 }
-body.dark .edrea_modalbox .box_inner{
-	background-color: #111319;
+body.dark .edrea_news{
+		 background-image: url("../img/banner/01.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+body.dark .edrea_modalbox .box_inner {
+    background-color: #111319;
 }
-body.dark .edrea_modalbox .fixed_title span{
-	color: #A9AFC3;
+
+body.dark .edrea_modalbox .fixed_title span {
+    color: #A9AFC3;
 }
-body.dark .edrea_modalbox .fixed_title{
-	background-color: #191C26;
-	color: #fff;
-	box-shadow: 0px 3px 4px rgb(255 255 255 / 5%);
+
+body.dark .edrea_modalbox .fixed_title {
+    background-color: #191C26;
+    color: #fff;
+    box-shadow: 0px 3px 4px rgb(255 255 255 / 5%);
 }
-body.dark .edrea_topbar.animate .in{
-	background-color: #111319;
-	box-shadow: 0px 5px 10px rgb(255 255 255 / 5%)
+
+body.dark .edrea_topbar.animate .in {
+    background-color: #111319;
+    box-shadow: 0px 5px 10px rgb(255 255 255 / 5%)
 }
-body.dark .edrea_topbar ul li a{
-	color: #eee;
+
+body.dark .edrea_topbar ul li a {
+    color: #eee;
 }
-body.dark .edrea_topbar ul li.button a:hover{
-	color: #fff;
+
+body.dark .edrea_topbar ul li.button a:hover {
+    color: #fff;
 }
-body.dark .edrea_topbar ul li a:hover{
-	color: #FFDD00;
+
+body.dark .edrea_topbar ul li a:hover {
+    color: #FFDD00;
 }
-body.dark .edrea_topbar .menu .ccc{
-	background-color: #FFDD00;
+
+body.dark .edrea_topbar .menu .ccc {
+    background-color: #FFDD00;
 }
+
 body.dark .edrea_about,
 body.dark .edrea_information,
 body.dark .edrea_testimonials,
-body.dark .edrea_contact{
-	background-color: #191C26;
+body.dark .edrea_contact {
+    background-color: #000000;
 }
-body.dark .edrea_title.bg_white .sub_text span{
-	background-color: #191C26;
+
+body.dark .edrea_title.bg_white .sub_text span {
+    background-color: #191C26;
 }
-body.dark .edrea_title .sub_text span{
-	background-color: #111319;
+
+body.dark .edrea_title .sub_text span {
+    background-color: #111319;
 }
-body.dark .edrea_service_list .service_item{
-	background-color: transparent;
-	border-color: #191C26;
+
+body.dark .edrea_service_list .service_item {
+    background-color: transparent;
+    border-color: #191C26;
 }
-body.dark .edrea_service_list .service_item:hover{
-	background-color: #191c26;
+
+body.dark .edrea_service_list .service_item:hover {
+    background-color: #191c26;
 }
-body.dark .edrea_information .info_left .item{
-	background-color: #111319;
+
+body.dark .edrea_information .info_left .item {
+    background-color: #111319;
 }
-body.dark .edrea_prevnext a{
-	color: #A9AFC3;
+
+body.dark .edrea_prevnext a {
+    color: #A9AFC3;
 }
-body.dark .edrea_prevnext a:hover{
-	color: #FFDD00;
+
+body.dark .edrea_prevnext a:hover {
+    color: #FFDD00;
 }
-body.dark .edrea_testi_slider .quote .svg{
-	color: #232734;
+
+body.dark .edrea_testi_slider .quote .svg {
+    color: #232734;
 }
-body.dark .edrea_prevnext a:after{
-	background-color: #A9AFC3;
+
+body.dark .edrea_prevnext a:after {
+    background-color: #A9AFC3;
 }
-body.dark .edrea_testi_slider .quote .svg{
-	color: #232734;
+
+body.dark .edrea_testi_slider .quote .svg {
+    color: #232734;
 }
-body.dark .edrea_testi_slider .item_in{
-	background-color: #111319;
+
+body.dark .edrea_testi_slider .item_in {
+    background-color: #111319;
 }
-body.dark .edrea_testi_slider .item_in:after{
-	border-left-color: #111319;
+
+body.dark .edrea_testi_slider .item_in:after {
+    border-left-color: #111319;
 }
-body.dark .edrea_testi_slider .title p{
-	color: #A9AFC3;
+
+body.dark .edrea_testi_slider .title p {
+    color: #A9AFC3;
 }
-body.dark .edrea_testi_slider .title h3{color: #fff;}
-body.dark .edrea_news_slider .item:hover .overlay{
-	background-color: rgba(2, 7, 19, 0.7);
+
+body.dark .edrea_testi_slider .title h3 {
+    color: #fff;
 }
-body.dark .edrea_contact .contact_right{
-	background-color: #111319;
+
+body.dark .edrea_news_slider .item:hover .overlay {
+    background-color: rgba(2, 7, 19, 0.7);
 }
-body.dark .edrea_contact_form h3{
-	color: #A9AFC3;
+
+body.dark .edrea_contact .contact_right {
+    background-color: #111319;
 }
-body.dark .edrea_contact_form a{
-	color: #fff;
-	border-color: #A9AFC3;
+
+body.dark .edrea_contact_form h3 {
+    color: #A9AFC3;
 }
-body.dark .edrea_contact_form a:hover{
-	background-color: #FFDD00;
-	border-color: #FFDD00;
+
+body.dark .edrea_contact_form a {
+    color: #fff;
+    border-color: #A9AFC3;
 }
-body.dark .edrea_footer p a{
-	color: #A9AFC3;
+
+body.dark .edrea_contact_form a:hover {
+    background-color: #FFDD00;
+    border-color: #FFDD00;
 }
-body.dark .edrea_footer p a:hover{
-	color: #FFDD00;
+
+body.dark .edrea_footer p a {
+    color: #A9AFC3;
 }
-body.dark .edrea_footer ul a .svg{
-	stroke: #A9AFC3;
+
+body.dark .edrea_footer p a:hover {
+    color: #FFDD00;
 }
-body.dark .edrea_footer ul a:hover .svg{
-	stroke: #FFDD00;
+
+body.dark .edrea_footer ul a .svg {
+    stroke: #A9AFC3;
 }
-body.dark .edrea_mobile_menu .mobile_menu_inner{
-	background-color: #000;
+
+body.dark .edrea_footer ul a:hover .svg {
+    stroke: #FFDD00;
 }
+
+body.dark .edrea_mobile_menu .mobile_menu_inner {
+    background-color: #000;
+}
+
 body.dark .my_trigger .hamburger .hamburger-inner::before,
 body.dark .my_trigger .hamburger .hamburger-inner::after,
-body.dark .my_trigger .hamburger .hamburger-inner{
-	background-color: #fff;
+body.dark .my_trigger .hamburger .hamburger-inner {
+    background-color: #fff;
 }
-body.dark .edrea_mobile_menu .dropdown{
-	background-color: #000;
-	box-shadow: 0px 10px 10px rgba(255,255,255,.05);
-	border-top: 1px solid #333;
+
+body.dark .edrea_mobile_menu .dropdown {
+    background-color: #000;
+    box-shadow: 0px 10px 10px rgba(255, 255, 255, .05);
+    border-top: 1px solid #333;
 }
-body.dark .edrea_mobile_menu .dropdown ul li a{
-	color: #fff;
+
+body.dark .edrea_mobile_menu .dropdown ul li a {
+    color: #fff;
 }
-body.dark .edrea_mobile_menu .dropdown ul li a:after{
-	background-color: #eee;
+
+body.dark .edrea_mobile_menu .dropdown ul li a:after {
+    background-color: #eee;
 }
+
 body.dark .edrea_contact_form textarea,
 body.dark .edrea_contact_form input[type="text"],
-body.dark .edrea_contact_form input[type="email"]{
-	color: #eee;
-}
-body.dark .edrea_contact .contact_left p a{
-	color: #A9AFC3;
-}
-body.dark .edrea_contact .contact_left p a:hover{
-	color: #FFDD00;
+body.dark .edrea_contact_form input[type="email"] {
+    color: #eee;
 }
 
+body.dark .edrea_contact .contact_left p a {
+    color: #A9AFC3;
+}
 
-
+body.dark .edrea_contact .contact_left p a:hover {
+    color: #FFDD00;
+}
