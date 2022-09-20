@@ -1,0 +1,2727 @@
+@charset "utf-8";
+
+
+/*	Copyright (c) 2022 ib-themes
+
+
+.
+
+
+
+/*--------------------------------f-------------------
+/*	01) CORE CSS
+/*---------------------------------------------------*/
+
+
+/*.edrea_hero.content-background {
+	 background-image: url("../img/banner/01.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+*/
+.edrea_checklist {
+    margin-top: 3rem
+}
+
+html {
+    overflow-x: hidden;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: "Poppins";
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 0px;
+    word-wrap: break-word;
+    font-weight: 400;
+    background-color: #fff;
+    color: #7e7e7e;
+}
+
+body::-webkit-scrollbar {
+    width: 11px;
+}
+
+body {
+    scrollbar-width: thin;
+    scrollbar-color: #999 #fff;
+}
+
+body:-webkit-scrollbar-track {
+    background: #fff;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 10px;
+    border: 3px solid #fff;
+}
+
+[class^="edrea_"] .content,
+[class^="edrea_"],
+section {
+    width: 100%;
+    float: left;
+    clear: both;
+    height: auto;
+}
+
+a {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.svg {
+    fill: currentcolor;
+    width: 15px;
+    height: 15px;
+}
+
+.svg.custom {
+    fill: none;
+    stroke: #000;
+}
+
+::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: #7e7e7e;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #7e7e7e;
+    opacity: 1;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #7e7e7e;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #7e7e7e;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #7e7e7e;
+}
+
+::placeholder {
+    /* Most modern browsers support this now. */
+    color: #7e7e7e;
+}
+
+.overlay_image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    transition: all 1s ease;
+}
+
+.container {
+    max-width: 100vw;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    padding: 0 5rem;
+    position: relative;
+    clear: both;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.5;
+    font-family: "Poppins";
+    color: #0f172a;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+h1 {
+    font-size: 45px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 24px;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+h6 {
+    font-size: 16px;
+}
+
+.edrea_wrapper {
+    position: relative;
+}
+
+*:after,
+*:before,
+.edrea_wrapper,
+.edrea_wrapper * {
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* Opera/IE 8+ */
+}
+
+/* Preloader */
+#preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 99999;
+    display: flex;
+}
+
+#preloader:before,
+#preloader:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+    background-color: #000;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+#preloader:after {
+    left: auto;
+    right: 0;
+}
+
+#preloader .loader_line {
+    margin: auto;
+    width: 1px;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: all 0.8s ease 0s;
+    -o-transition: all 0.8s ease 0s;
+    transition: all 0.8s ease 0s;
+}
+
+.loader_line:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 1px;
+    height: 0%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background-color: #fff;
+    -webkit-animation: lineheight 1000ms ease-in-out 0s forwards;
+    -o-animation: lineheight 1000ms ease-in-out 0s forwards;
+    animation: lineheight 1000ms ease-in-out 0s forwards;
+}
+
+.loader_line:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #999999;
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+    -webkit-animation: lineround 1200ms linear 0s infinite;
+    -o-animation: lineround 1200ms linear 0s infinite;
+    animation: lineround 1200ms linear 0s infinite;
+    animation-delay: 2000ms;
+}
+
+@keyframes lineheight {
+    0% {
+        height: 0%;
+    }
+
+    100% {
+        height: 100%;
+    }
+}
+
+@keyframes lineround {
+    0% {
+        -webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        -o-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+
+    100% {
+        -webkit-transform: translateY(200%);
+        -ms-transform: translateY(200%);
+        -o-transform: translateY(200%);
+        transform: translateY(200%);
+    }
+}
+
+.preloaded .loader_line:after {
+    opacity: 0;
+}
+
+.preloaded .loader_line {
+    opacity: 0;
+    height: 100% !important;
+}
+
+.preloaded:before,
+.preloaded:after {
+    -webkit-animation: preloadedzero 300ms ease-in-out 500ms forwards;
+    -o-animation: preloadedzero 300ms ease-in-out 500ms forwards;
+    animation: preloadedzero 300ms ease-in-out 500ms forwards;
+}
+
+@keyframes preloadedzero {
+    0% {
+        width: 50%;
+    }
+
+    100% {
+        width: 0%;
+    }
+}
+
+/* Modalbox */
+.edrea_modalbox,
+.edrea_modalbox * {
+    box-sizing: border-box;
+}
+
+.edrea_modalbox .modal_content {
+    scrollbar-width: thin;
+    scrollbar-color: #999 #fff;
+}
+
+.edrea_modalbox .modal_content::-webkit-scrollbar {
+    width: 11px;
+}
+
+.edrea_modalbox .modal_content:-webkit-scrollbar-track {
+    background: #fff;
+}
+
+.edrea_modalbox .modal_content::-webkit-scrollbar-thumb {
+    background-color: #999;
+    border-radius: 6px;
+    border: 3px solid #fff;
+}
+
+.edrea_modalbox .fixed_title:empty {
+    display: none;
+}
+
+.edrea_modalbox .fixed_title {
+    margin: 0;
+    font-family: "Poppins";
+    font-size: 18px;
+    color: #0f172a;
+    background: #fff;
+    position: fixed;
+    z-index: 44;
+    left: 0;
+    padding: 5px 15px;
+    top: 5px;
+    box-shadow: 0px 3px 4px rgb(0 0 0 / 5%);
+    font-weight: 500;
+    border-radius: 0 10px 10px 0;
+    text-transform: capitalize;
+}
+
+.edrea_modalbox .fixed_title span {
+    color: #7e7e7e;
+    font-family: monospace;
+    font-size: 14px;
+    display: block;
+    border-bottom: 1px solid #bfbfbf;
+}
+
+.edrea_modalbox {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 100vh;
+    z-index: 15;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: hidden;
+
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.edrea_modalbox.opened {
+    opacity: 1;
+    visibility: visible;
+}
+
+.edrea_modalbox .container {
+    height: 100vh;
+}
+
+.edrea_modalbox .box_inner {
+    position: absolute;
+    top: 70px;
+    bottom: 70px;
+    width: 968px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    margin-top: -20px;
+    border-radius: 5px;
+
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.edrea_modalbox.opened .box_inner {
+    opacity: 1;
+    visibility: visible;
+    margin-top: 0px;
+}
+
+.edrea_modalbox .close {
+    position: fixed;
+    left: 100%;
+    top: 0px;
+    margin-left: 40px;
+    z-index: 111111;
+}
+
+.edrea_modalbox .close a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.edrea_modalbox .close .svg {
+    width: 50px;
+    height: 50px;
+}
+
+.edrea_modalbox .modal_content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    padding: 50px;
+    overflow-y: scroll;
+}
+
+.hidden_information {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    z-index: -11;
+    display: none;
+}
+
+.edrea_modalbox .image {
+    position: relative;
+    max-height: 450px;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+.edrea_modalbox .image img {
+    position: relative;
+    min-width: 100%;
+    opacity: 0;
+}
+
+.edrea_modalbox .image .main {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.edrea_modalbox h3 {
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.edrea_modalbox p {
+    margin-bottom: 30px;
+    /*	text-align: justify;*/
+}
+
+.edrea_modalbox .in_list {
+    width: 100%;
+    float: left;
+    margin-bottom: 30px;
+    padding-left: 20px;
+}
+
+.edrea_modalbox .in_list ul {
+    margin: 0px;
+    list-style-type: none;
+}
+
+.edrea_modalbox .in_list ul li {
+    margin: 0px 0px 10px 0px;
+    width: 100%;
+    float: left;
+    position: relative;
+    padding-left: 20px;
+}
+
+.edrea_modalbox .in_list ul li:before {
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background-color: #7e7e7e;
+    left: 0px;
+    top: 13px;
+}
+
+.edrea_modalbox .in_list ul li:last-child {
+    margin-bottom: 0px;
+}
+
+.edrea_modalbox .in_list ul li p {
+    margin-bottom: 0px;
+}
+
+.edrea_prevnext.disabled {
+    opacity: 0.5;
+}
+
+.edrea_prevnext .next,
+.edrea_prevnext .prev {
+    float: right;
+    position: relative;
+}
+
+.edrea_prevnext .prev {
+    margin-right: 20px;
+}
+
+.edrea_prevnext a {
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: uppercase;
+    min-width: 90px;
+    position: relative;
+    color: #7e7e7e;
+    padding-bottom: 11px;
+    overflow: hidden;
+}
+
+.edrea_prevnext .prev a {
+    text-align: left;
+}
+
+.edrea_prevnext .next a {
+    text-align: right;
+}
+
+.edrea_prevnext a:hover {
+    color: #dd4242;
+    border-color: #dd4242;
+}
+
+.edrea_prevnext a:after {
+    width: 100%;
+    bottom: 0;
+    content: "";
+    position: absolute;
+    height: 1px;
+    background-color: #7e7e7e;
+    transition: all 0.3s 0.3s ease;
+}
+
+.edrea_prevnext a:before {
+    margin: 0;
+    padding: 0;
+    width: 0;
+    bottom: 0;
+    content: "";
+    position: absolute;
+    height: 1px;
+    z-index: 3;
+    background-color: #dd4242;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.edrea_prevnext a:hover:before {
+    width: 100%;
+    opacity: 1;
+    transition: all 0.3s 0.3s ease;
+}
+
+.edrea_prevnext a:hover:after {
+    width: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.edrea_prevnext .next a:after {
+    right: 0;
+}
+
+.edrea_prevnext .next a:before {
+    left: 0;
+}
+
+.edrea_prevnext .prev a:after {
+    left: 0;
+}
+
+.edrea_prevnext .prev a:before {
+    right: 0;
+}
+
+/*---------------------------------------------------*/
+/*	xx) TOPBAR
+/*---------------------------------------------------*/
+.edrea_topbar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 10;
+
+    -webkit-transition: all 0.8s ease;
+    -moz-transition: all 0.8s ease;
+    -ms-transition: all 0.8s ease;
+    -o-transition: all 0.8s ease;
+    transition: all 0.8s ease;
+}
+
+.edrea_topbar .in {
+    padding: 40px 0px;
+
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.edrea_topbar.animate .in {
+    background-color: #fff;
+    padding: 20px 0px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.edrea_wrapper.animate .edrea_topbar {
+    top: 0px;
+    transition-delay: 1.2s;
+}
+
+.edrea_topbar .topbar_inner {
+    width: 100%;
+    height: auto;
+    clear: both;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.edrea_topbar .logo {
+    margin-right: 20px;
+}
+
+.edrea_topbar .logo img {
+    /*max-width: 120px;
+	max-height: 70px;*/
+    width: 20vw;
+}
+
+.edrea_topbar ul {
+    margin: 0px;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+.edrea_topbar ul li {
+    margin: 0px 35px 0px 0px;
+    list-style-type: none;
+}
+
+.edrea_topbar ul li:last-child {
+    margin-right: 0px;
+}
+
+.edrea_topbar ul li a {
+    text-decoration: none;
+    color: #7e7e7e;
+    font-size: 16px;
+    font-weight: 500;
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+
+.edrea_topbar ul li.button a {
+    border: 2px solid #7e7e7e;
+    padding: 4px 27px;
+    border-radius: 50px;
+    color: #0f172a;
+}
+
+.edrea_topbar ul li.button a:hover,
+.edrea_topbar ul li.current.button a {
+    border-color: #dd4242;
+    background-color: #dd4242;
+    color: #fff;
+}
+
+.edrea_topbar ul li.current a {
+    color: #dd4242;
+}
+
+.edrea_topbar ul li a:hover {
+    color: #dd4242;
+}
+
+.edrea_topbar .menu {
+    position: relative;
+}
+
+.edrea_topbar .menu .ccc {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    background-color: #dd4242;
+    display: block;
+    height: 2px;
+    transition: all 0.5s ease;
+    border-radius: 3px;
+}
+
+/* Hero Header */
+.edrea_hero {
+    position: relative;
+}
+
+.edrea_hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.edrea_hero .overlay_color {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.edrea_hero .overlay_image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 75% 100%;
+}
+
+.edrea_hero .content {
+    position: relative;
+    width: 100%;
+    z-index: 3;
+}
+
+.edrea_hero .content_in {
+    width: 100%;
+    /*max-width: 710px;*/
+    min-height: 100vh;
+    padding: 125px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.edrea_hero .title {
+    margin: 0;
+    padding: 0;
+    font-size: 13rem;
+    line-height: 90px;
+    margin-bottom: 3rem;
+}
+
+.edrea_hero .title span {
+    color: #FFDD00;
+}
+
+.edrea_hero .description {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 43px;
+}
+
+.edrea_video_button {
+    max-width: 260px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+.edrea_video_button .icon {
+    min-width: 66px;
+    width: 66px;
+    height: 66px;
+    position: relative;
+    margin-right: 27px;
+    border-radius: 50%;
+    background-color: #dd4242;
+    transition: all 0.6s ease;
+}
+
+.edrea_video_button .icon .svg {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    top: 50%;
+    left: 50%;
+    margin: -11px 0 0 -8px;
+    color: #fff;
+}
+
+.edrea_video_button .video_right {
+    width: 100%;
+}
+
+.edrea_video_button span {
+    display: block;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 8px 0 9px;
+    position: relative;
+}
+
+.edrea_video_button .top:after {
+    content: "";
+    right: 0;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: #bfbfbf;
+    height: 1px;
+    transition: all 0.3s 0.3s ease;
+}
+
+.edrea_video_button .top:before {
+    content: "";
+    left: 0;
+    width: 0;
+    position: absolute;
+    bottom: 0px;
+    background-color: #bfbfbf;
+    height: 1px;
+    transition: all 0.3s ease;
+}
+
+.edrea_video_button:hover .top:after {
+    width: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.edrea_video_button:hover .top:before {
+    width: 100%;
+    opacity: 1;
+    transition: all 0.3s 0.3s ease;
+}
+
+.edrea_video_button:hover .icon {
+    background-color: #0f172a;
+}
+
+.edrea_video_button .bottom {
+    color: #dd4242;
+}
+
+.edrea_video_button a {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* About */
+
+.edrea_about {
+    padding-top: 120px;
+}
+
+body.dark .edrea_about {
+    padding-bottom: 120px;
+}
+
+@media (max-width: 768px) {
+    body.dark .edrea_about {
+        padding-bottom: 60px;
+    }
+
+    .edrea_about {
+        padding-top: 60px;
+    }
+}
+
+.edrea_about .about_in {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.edrea_about .about-image {
+    position: relative;
+    width: 50%;
+}
+
+.edrea_about .content {
+    position: relative;
+    width: 50%;
+    padding-left: 50px;
+}
+
+.edrea_about .content .edrea_title {
+    max-width: 600px;
+    margin: 0;
+    padding: 0;
+    float: none;
+    clear: none;
+}
+
+.edrea_title {
+    max-width: 670px;
+}
+
+.edrea_title .sub_text {
+    margin-bottom: 23px;
+}
+
+.edrea_title .sub_text span {
+    display: inline-block;
+    padding: 8px 18px;
+    font-size: 14px;
+    line-height: 21px;
+    background-color: rgba(0, 0, 0, 0.03);
+    color: #dd4242;
+}
+
+.edrea_title.bg_white .sub_text span {
+    background-color: #f9f9fc;
+}
+
+.edrea_title .title {
+    margin: 0;
+    padding: 0;
+    font-size: 60px;
+    line-height: 1.25;
+    /*margin-bottom: 23px;*/
+}
+
+.edrea_title .sub-title {
+    margin-bottom: 20px;
+    font-family: "Poppins";
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+.edrea_title .sub-title strong {
+    color: #888;
+    font-weight: 500;
+}
+
+.edrea_title .title span {
+    color: #FFDD00;
+}
+
+.edrea_title .description {
+    margin-bottom: 31px;
+}
+
+.edrea_title .edrea_button {
+    margin-top: 9px;
+}
+
+.edrea_title>*:last-child {
+    margin-bottom: 0;
+}
+
+.edrea_button a {
+    display: inline-block;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: center;
+    padding: 12px 30px;
+    text-decoration: none;
+    color: #dd4242;
+    border: 2px solid #dd4242;
+    border-radius: 40px;
+}
+
+.edrea_button a:hover {
+    background-color: #dd4242;
+    color: #fff;
+}
+
+/* Servise */
+.edrea_about {
+    background-image: url("img/3862489.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.edrea_services {
+    padding: 120px 0;
+}
+
+.edrea_services .content {
+    display: flex;
+    flex-direction: row;
+}
+
+.edrea_services .service_left {
+    width: 45vw;
+    min-width: 45vw;
+    padding-right: 80px;
+}
+
+.edrea_service_list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.edrea_service_list>li {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.edrea_service_list .service_item {
+    width: 100%;
+    border: 2px solid #f9f9fc;
+    background-color: #fff;
+    padding: 30px 105px 30px 90px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.edrea_service_list h3 {
+    width: 40%;
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+    font-size: 24px;
+    padding-right: 10px;
+    font-family: "Poppins";
+}
+
+.edrea_service_list p {
+    width: 60%;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.edrea_service_list .icon {
+    position: absolute;
+    display: block;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.edrea_service_list .icon .svg {
+    width: 40px;
+    display: block;
+    height: 40px;
+}
+
+.edrea_service_list .arrow {
+    position: absolute;
+    right: 45px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.edrea_service_list .arrow .svg {
+    width: 15px;
+    display: block;
+    height: 15px;
+    stroke: #7e7e7e;
+}
+
+.edrea_service_list .service_item:hover {
+    background-color: #f9f9fc;
+}
+
+.edrea_service_list .service_item:hover .arrow .svg {
+    stroke: #dd4242;
+}
+
+/* Information */
+.edrea_information {
+    background-color: #f9f9fc;
+    padding: 120px 0;
+}
+
+.edrea_information .content {
+    width: 100%;
+    float: left;
+    clear: both;
+}
+
+.edrea_information .info_left {
+    width: 50%;
+    float: left;
+    padding-right: 60px;
+}
+
+.edrea_information .info_left ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin-left: -40px;
+}
+
+.edrea_information .info_left li {
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    float: left;
+    padding-left: 40px;
+    margin-bottom: 40px;
+}
+
+.edrea_information .info_left li:nth-child(2) {
+    margin-top: 40px;
+}
+
+.edrea_information .info_left .item {
+    width: 100%;
+    float: left;
+    clear: both;
+    padding: 40px 30px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.edrea_information .info_left .svg {
+    width: 45px;
+    height: 45px;
+}
+
+.edrea_information .info_left h3 {
+    font-family: "Poppins";
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 75px;
+    letter-spacing: 0em;
+}
+
+.edrea_counter {
+    width: auto;
+    float: none;
+    clear: none;
+}
+
+.edrea_information .info_left h3 .suffix,
+.edrea_information .info_left h3 .prefix {
+    color: #FFDD00;
+}
+
+.edrea_information .info_left p {
+    font-family: "DM Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0em;
+}
+
+.edrea_information .info_right {
+    width: 50%;
+    padding-left: 60px;
+    float: left;
+}
+
+.edrea_information .edrea_title {
+    margin-bottom: 54px;
+}
+
+.edrea_checklist ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.edrea_checklist li {
+    position: relative;
+    width: 100%;
+    float: left;
+    clear: both;
+    margin: 0 0 27px 0;
+    padding: 0 0 0 42px;
+}
+
+.edrea_checklist li:last-child {
+    margin-bottom: 0;
+}
+
+.edrea_checklist .icon {
+    position: absolute;
+    top: 5px;
+    left: 0;
+}
+
+.edrea_checklist .svg {
+    width: 22px;
+    height: 22px;
+    fill: none;
+    display: block;
+}
+
+.edrea_checklist h3 {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0em;
+    margin-bottom: 10px;
+}
+
+.edrea_checklist p {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+}
+
+/* Portfolio */
+.edrea_portfolio {
+    padding: 120px 0;
+}
+
+.edrea_portfolio .edrea_title {
+    margin-bottom: 60px;
+}
+
+.edrea_portfolio_slider .item {
+    cursor: pointer;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+.edrea_portfolio_slider .item img {
+    min-width: 100%;
+    opacity: 0;
+}
+
+.edrea_portfolio_slider .item .image {
+    width: 100%;
+    position: relative;
+}
+
+.edrea_portfolio_slider .item:hover .overlay_image {
+    transform: scale(1.2);
+}
+
+.edrea_portfolio_slider .item:hover .overlay {
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.edrea_portfolio_slider .item:hover .title_holder {
+    top: 0;
+}
+
+.edrea_portfolio_slider .item .overlay {
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    transition: all 0.4s ease;
+    z-index: 1;
+}
+
+.edrea_portfolio_slider .item .title_holder {
+    position: absolute;
+    top: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 30px;
+
+    transition: all 0.8s ease;
+}
+
+.edrea_portfolio_slider .item .title_holder h3 {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27px;
+    letter-spacing: 0em;
+    color: #dd4242;
+    margin-bottom: 5px;
+}
+
+.edrea_portfolio_slider .item .title_holder p {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    color: #a9afc3;
+}
+
+.edrea_portfolio_slider .item .title_holder h3>span {
+    padding-right: 40px;
+    position: relative;
+}
+
+.edrea_portfolio_slider .item .title_holder .svg {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -10px;
+    fill: none;
+}
+
+.edrea_portfolio_slider .edrea_slider_in {
+    margin-bottom: 43px;
+}
+
+/* Testimonials */
+.edrea_testimonials {
+    background-color: #f9f9fc;
+    padding: 120px 0;
+}
+
+.edrea_testimonials .testi_left {
+    width: 50%;
+    float: left;
+    padding-right: 40px;
+}
+
+.edrea_testimonials .testi_right {
+    width: 50%;
+    float: left;
+    padding-top: 120px;
+    padding-left: 40px;
+}
+
+.edrea_testi_slider .item_in {
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    padding: 60px 50px 60px 150px;
+    border-radius: 20px 20px 20px 0;
+}
+
+.edrea_testi_slider .item {
+    padding-bottom: 40px;
+}
+
+.edrea_testi_slider .item_in:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    margin-top: -40px;
+    border: 40px solid transparent;
+    border-left-color: #fff;
+}
+
+.edrea_testi_slider .quote {
+    width: 100%;
+    position: relative;
+    height: 0;
+}
+
+.edrea_testi_slider .quote .svg {
+    color: #fff;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    right: 100%;
+    margin-right: -40px;
+    bottom: -100px;
+}
+
+.edrea_testi_slider .edrea_prevnext {
+    margin-top: 43px;
+}
+
+.edrea_testi_slider .icon {
+    position: absolute;
+    top: 60px;
+    left: 50px;
+}
+
+.edrea_testi_slider .icon .svg {
+    width: 50px;
+    height: 50px;
+    color: #dd4242;
+}
+
+.edrea_testi_slider .title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    min-height: 60px;
+    padding-left: 90px;
+    position: relative;
+    flex-direction: column;
+}
+
+.edrea_testi_slider .title h3 {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27px;
+    letter-spacing: 0em;
+    color: #0f172a;
+    margin-bottom: 6px;
+}
+
+.edrea_testi_slider .title p {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #7e7e7e;
+}
+
+.edrea_testi_slider .description {
+    margin-bottom: 30px;
+}
+
+.edrea_testi_slider .description p {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.edrea_testi_slider .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: block;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* News */
+.edrea_news {
+    padding: 120px 0;
+}
+
+.edrea_news .edrea_title {
+    margin-bottom: 60px;
+    max-width: 670px;
+}
+
+.edrea_news_slider .owl-carousel {
+    margin-bottom: 43px;
+}
+
+.edrea_news_slider .item {
+    cursor: pointer;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+.edrea_news_slider .item img {
+    min-width: 100%;
+    opacity: 0;
+}
+
+.edrea_news_slider .item .image {
+    width: 100%;
+    position: relative;
+}
+
+.edrea_news_slider .item:hover .overlay {
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.edrea_news_slider .item:hover .title_holder {
+    top: 0;
+}
+
+.edrea_news_slider .item:hover .overlay_image {
+    transform: scale(1.2);
+}
+
+.edrea_news_slider .item .overlay {
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    transition: all 0.4s ease;
+    z-index: 1;
+}
+
+.edrea_news_slider .item .title_holder {
+    position: absolute;
+    top: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 50px;
+
+    transition: all 0.8s ease;
+}
+
+.edrea_news_slider .item .title_holder h3 {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 38px;
+    letter-spacing: 0em;
+    color: #fff;
+}
+
+.edrea_news_slider .item .title_holder p {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    color: #fff;
+    margin-bottom: 14px;
+}
+
+.edrea_news_slider .item .title_holder .type {
+    margin-left: 8px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.edrea_news_slider .item .title_holder .type:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 4px;
+    height: 4px;
+    top: 50%;
+    margin-top: -2px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+/* Contact */
+.edrea_contact {
+    background-color: #f9f9fc;
+    padding: 120px 0;
+}
+
+.edrea_contact .edrea_title {
+    margin-bottom: 60px;
+    max-width: 670px;
+}
+
+.edrea_contact .contact_cols {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.edrea_contact .contact_left {
+    width: 50%;
+    padding-right: 80px;
+}
+
+.edrea_contact .contact_left ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.edrea_contact .contact_left li {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    margin-bottom: 33px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.edrea_contact .contact_left li .icon {
+    margin-right: 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.edrea_contact .contact_left h3 {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0em;
+    margin-bottom: 9px;
+}
+
+.edrea_contact .contact_left p {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0em;
+}
+
+.edrea_contact .contact_left p a {
+    color: #7e7e7e;
+    text-decoration: none;
+}
+
+.edrea_contact .contact_left p a:hover {
+    color: #dd4242;
+}
+
+.edrea_contact .contact_right {
+    width: 50%;
+    padding: 45px 45px 60px 45px;
+    background-color: #fff;
+}
+
+.edrea_contact_form h3 {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 41px;
+    letter-spacing: 0em;
+    margin-bottom: 8px;
+}
+
+.edrea_contact_form h4 {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 41px;
+    letter-spacing: 0em;
+    color: #7e7e7e;
+}
+
+.edrea_contact_form textarea,
+.edrea_contact_form input[type="text"],
+.edrea_contact_form input[type="email"] {
+    font-family: "DM Sans";
+    font-size: 16px;
+    font-style: normal;
+    display: block;
+    font-weight: 500;
+    line-height: 21px;
+    height: 62px;
+    letter-spacing: -0.025em;
+    text-align: left;
+    padding: 20px 0;
+    width: 100%;
+    outline-color: transparent;
+    outline: none;
+    border: none;
+    background: none;
+    border-bottom: 1px solid #7e7e7e;
+}
+
+.edrea_contact_form textarea:focus,
+.edrea_contact_form input[type="text"]:focus,
+.edrea_contact_form input[type="email"]:focus {
+    background: none;
+}
+
+.edrea_contact_form a {
+    display: inline-block;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: center;
+    padding: 8px 40px;
+    text-decoration: none;
+    color: #0f172a;
+    border: 2px solid #7e7e7e;
+    border-radius: 40px;
+    overflow: hidden;
+    position: relative;
+    background-color: transparent;
+}
+
+.edrea_contact_form a:hover {
+    border-color: #dd4242;
+    background-color: #dd4242;
+    color: #fff;
+}
+
+.edrea_contact_form a:hover:after {
+    height: 100%;
+}
+
+.edrea_contact_form a:hover:before {
+    top: 0;
+}
+
+.edrea_contact_form .item {
+    margin-top: 40px;
+}
+
+.edrea_contact_form .item:first-child {
+    margin-top: 20px;
+}
+
+.edrea_contact_form .item:last-child {
+    margin-top: 60px;
+}
+
+.edrea_contact_form .empty_notice {
+    color: #f52225;
+    margin-bottom: 7px;
+    display: none;
+    text-align: left;
+    font-weight: 500;
+}
+
+.edrea_contact_form .error {
+    color: #f52225;
+    text-align: left;
+    font-weight: 500;
+}
+
+.edrea_contact_form .success {
+    color: #3a00ff;
+    margin-bottom: 7px;
+    text-align: left;
+    font-weight: 500;
+}
+
+/* Footer */
+
+.edrea_footer {
+    padding: 30px 0;
+}
+
+.edrea_footer .content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.edrea_footer p {
+    font-family: "Poppins";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+}
+
+.edrea_footer p a {
+    text-decoration: none;
+    color: #7e7e7e;
+}
+
+.edrea_footer p a:hover {
+    color: #dd4242;
+}
+
+.edrea_footer ul a {
+    display: block;
+    color: #7e7e7e;
+    text-decoration: none;
+}
+
+.edrea_footer ul a .svg {
+    width: 23px;
+    height: 23px;
+    stroke: #7e7e7e;
+    display: block;
+    fill: none;
+    transition: all 0.3s ease;
+}
+
+.edrea_footer ul a:hover .svg {
+    stroke: #dd4242;
+}
+
+.edrea_footer ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.edrea_footer ul li {
+    margin: 0 0 0 20px;
+    padding: 0;
+}
+
+/* Mobile Menu */
+.edrea_mobile_menu {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: none;
+    z-index: 10;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.edrea_mobile_menu .my_trigger {
+    line-height: 1;
+    position: relative;
+}
+
+.edrea_mobile_menu .mobile_menu_inner {
+    width: 100%;
+    height: auto;
+    float: left;
+    clear: both;
+    background-color: #fff;
+    padding: 15px 0px;
+}
+
+.edrea_mobile_menu .mobile_in {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.edrea_mobile_menu .mobile_in .logo img {
+    max-width: 500px;
+}
+
+.my_trigger .hamburger-box {
+    display: block;
+}
+
+.my_trigger .hamburger {
+    padding: 0px;
+}
+
+.my_trigger .hamburger .hamburger-inner::before,
+.my_trigger .hamburger .hamburger-inner::after,
+.my_trigger .hamburger .hamburger-inner {
+    background-color: #000;
+    width: 30px;
+    height: 2px;
+
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.my_trigger .hamburger-box {
+    width: 30px;
+}
+
+.edrea_mobile_menu .dropdown {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    background-color: #fff;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);
+    display: none;
+    border-top: 1px solid #f5f5f5;
+}
+
+.edrea_mobile_menu .dropdown_inner {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    padding: 31px 0 30px 0px;
+}
+
+.edrea_mobile_menu .dropdown ul {
+    margin: 0px;
+    list-style-type: none;
+}
+
+.edrea_mobile_menu .dropdown ul li {
+    margin: 0px;
+    padding: 0px;
+    float: left;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.edrea_mobile_menu .dropdown ul li:last-child {
+    margin-bottom: 0;
+}
+
+.edrea_mobile_menu .dropdown ul li a {
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
+    font-family: "Poppins";
+    font-weight: 500;
+    position: relative;
+    font-size: 16px;
+}
+
+.edrea_mobile_menu .dropdown ul li a:after {
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    content: "";
+    background-color: #7e7e7e;
+    transition: all 0.3s ease;
+}
+
+.edrea_mobile_menu .dropdown ul li.current a:after {
+    width: 100%;
+}
+
+/* Intro CSS */
+.edrea_full_link {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    display: block;
+    z-index: 20;
+}
+
+.edrea_intro .hero {
+    width: 100%;
+    height: 100vh;
+    float: left;
+    position: relative;
+}
+
+.edrea_intro .hero:after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 1;
+    background-color: #000;
+}
+
+.edrea_intro .hero .image {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-repeat: no-repeat;
+    background-repeat: repeat;
+    opacity: 0.4;
+    z-index: 3;
+}
+
+.edrea_intro .hero .content {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    padding: 0px 20px;
+}
+
+.edrea_intro .hero .content p {
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+    padding: 45px 0px;
+}
+
+.edrea_intro .edrea_button a {
+    color: #fff;
+    background-color: #dd4242;
+}
+
+.edrea_intro .edrea_button a:hover {
+    color: #fff;
+    background-color: transparent;
+}
+
+.edrea_intro .mainpart {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    padding-top: 120px;
+}
+
+.edrea_intro .main_title {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    text-align: center;
+}
+
+.edrea_intro .main_title span {
+    color: #dd4242;
+    font-size: 16px;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 6px;
+}
+
+.edrea_intro .main_title h3 {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.edrea_intro .demo_list {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    margin-top: 62px;
+}
+
+.edrea_intro .demo_list ul {
+    margin: 0px 0px 0px -140px;
+    list-style-type: none;
+}
+
+.edrea_intro .demo_list ul li {
+    margin: 0px 0px 140px 0px;
+    width: 50%;
+    float: left;
+    padding-left: 140px;
+    text-align: center;
+}
+
+.edrea_intro .demo_list ul li .list_inner:hover {
+    transform: translateY(-20px);
+}
+
+.edrea_intro .demo_list ul li .list_inner {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 10%);
+    border-radius: 20px;
+    overflow: hidden;
+    padding-bottom: 70px;
+}
+
+.edrea_intro .demo_list ul li:nth-child(2) .list_inner {
+    box-shadow: 0 5px 15px rgb(255 255 255 / 10%);
+}
+
+.edrea_intro .demo_list ul li:nth-child(2) .list_inner h3 {
+    color: #fff;
+    background-color: #000;
+}
+
+.edrea_intro .demo_list ul li .list_inner h3 {
+    font-size: 20px;
+    font-weight: 500;
+    padding: 20px 0;
+    font-family: "Poppins";
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    color: #000;
+    z-index: 5;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    height: 70px;
+}
+
+.edrea_intro .demo_list ul li .list_inner:hover h3 {
+    height: 100%;
+    font-size: 26px;
+}
+
+.edrea_intro .go_purchase {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    background-color: #151515;
+    padding: 53px 20px 120px 20px;
+    text-align: center;
+}
+
+.edrea_intro .go_purchase h3 {
+    font-size: 60px;
+    font-weight: 700;
+    color: #fff;
+    margin: 43px;
+}
+
+.edrea_intro .copyright {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    background-color: #1a1a1a;
+    text-align: center;
+    padding: 15px 20px;
+}
+
+.edrea_intro .copyright p {
+    font-size: 14px;
+    color: #faf9fd;
+}
+
+.edrea_intro .copyright p a {
+    color: #fff;
+    text-decoration: none;
+
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.edrea_intro .copyright p a:hover {
+    color: #dd4242;
+}
+
+body.intro #preloader:before,
+body.intro #preloader:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+    background-color: #fff;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+body.intro #preloader:after {
+    left: auto;
+    right: 0;
+}
+
+body.intro .loader_line:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 1px;
+    height: 0%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background-color: #555;
+    -webkit-animation: lineheight 1000ms ease-in-out 0s forwards;
+    -o-animation: lineheight 1000ms ease-in-out 0s forwards;
+    animation: lineheight 1000ms ease-in-out 0s forwards;
+}
+
+body.intro .loader_line:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #ddd;
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+    -webkit-animation: lineround 1200ms linear 0s infinite;
+    -o-animation: lineround 1200ms linear 0s infinite;
+    animation: lineround 1200ms linear 0s infinite;
+    animation-delay: 2000ms;
+}
+
+/* some of experiments */
+.edrea_information .info_left h3 .suffix,
+.edrea_information .info_left h3 .prefix {
+    color: inherit;
+}
+
+.edrea_portfolio_slider .item .title_holder p {
+    color: #fff;
+}
+
+/* Responsive CSS */
+@media (max-width: 1200px) {
+    .edrea_modalbox.opened .box_inner {
+        width: 600px;
+    }
+
+    .edrea_modalbox .close {
+        margin-left: 20px;
+    }
+
+    .edrea_modalbox .modal_content {
+        padding: 30px 15px;
+    }
+
+    .edrea_about .about-image {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1040px) {
+    body.dark .edrea_hero .overlay_color {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .edrea_title {
+        max-width: 100%;
+    }
+
+    .edrea_mobile_menu {
+        display: block;
+    }
+
+    .edrea_topbar {
+        display: none;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    .edrea_title .title,
+    .edrea_hero .title {
+        font-size: 2rem;
+        /*line-height: 1.3;*/
+    }
+
+    h3.title.title-dekstop {
+        font-size: 10rem;
+        line-height: 9rem;
+    }
+
+    .edrea_button a {
+        font-size: 16px;
+        padding: 1rem 1rem;
+    }
+
+    .edrea_contact_form a {
+        font-size: 16px;
+        padding: 7px 30px;
+    }
+
+    .edrea_about .content {
+        width: 100%;
+        padding: 70px 20px 0;
+    }
+
+    .edrea_about .overlay {
+        width: 100%;
+        position: relative;
+        height: 400px;
+        height: 55vw;
+    }
+
+    .edrea_about {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .edrea_about .content .edrea_title {
+        max-width: 100%;
+    }
+
+    .edrea_services .service_left {
+        width: 100%;
+        min-width: 100%;
+        padding: 0 0 40px;
+    }
+
+    .edrea_services .content {
+        flex-direction: column;
+    }
+
+    .edrea_services {
+        padding: 70px 0;
+    }
+
+    .edrea_service_list h3 {
+        font-size: 18px;
+    }
+
+    .edrea_information .info_left h3 {
+        font-size: 30px;
+    }
+
+    .edrea_information .info_left {
+        width: 100%;
+        padding: 0 0 30px;
+    }
+
+    .edrea_information .info_right {
+        width: 100%;
+        padding: 0;
+    }
+
+    .edrea_information {
+        padding: 70px 0;
+    }
+
+    .edrea_information .info_left li {
+        padding-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    .edrea_information .info_left ul {
+        margin-left: -20px;
+    }
+
+    .edrea_information .info_left li:nth-child(2) {
+        margin-top: 20px;
+    }
+
+    .edrea_information .edrea_title {
+        margin-bottom: 34px;
+    }
+
+    .edrea_portfolio {
+        padding: 70px 0;
+    }
+
+    .edrea_portfolio .edrea_title {
+        margin-bottom: 40px;
+    }
+
+    .edrea_testimonials .testi_left {
+        width: 100%;
+        padding: 0 0 40px;
+    }
+
+    .edrea_testimonials .testi_right {
+        width: 100%;
+        padding: 0;
+    }
+
+    .edrea_testi_slider .quote {
+        display: none;
+    }
+
+    .edrea_testimonials {
+        padding: 70px 0;
+    }
+
+    .edrea_news .edrea_title {
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .edrea_news {
+        padding: 70px 0;
+    }
+
+    .edrea_contact .edrea_title {
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .edrea_contact .contact_left {
+        width: 100%;
+        padding: 0 0 25px;
+    }
+
+    .edrea_contact .contact_right {
+        width: 100%;
+        padding: 27px 30px 30px 30px;
+    }
+
+    .edrea_contact .contact_cols {
+        flex-direction: column;
+    }
+
+    .edrea_contact .contact_left li {
+        margin-bottom: 19px;
+    }
+
+    .edrea_contact {
+        padding: 70px 0;
+    }
+
+    .edrea_contact .contact_left h3 {
+        font-size: 16px;
+        margin-bottom: 3px;
+        line-height: 1.5;
+    }
+
+    .edrea_contact .contact_left p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .edrea_contact_form h3 {
+        font-size: 20px;
+        line-height: 1.5;
+        margin-bottom: 5px;
+    }
+
+    .edrea_contact_form h4 {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+    .edrea_news_slider .item .title_holder {
+        padding: 20px 20px 22px;
+    }
+
+    .edrea_news_slider .item .title_holder h3 {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+    .edrea_news_slider .item .title_holder p {
+        margin-bottom: 6px;
+    }
+
+    /* No animation */
+    .edrea_portfolio_slider .item .overlay {
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .edrea_portfolio_slider .item .title_holder {
+        top: 0;
+    }
+
+    .edrea_news_slider .item .overlay {
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .edrea_news_slider .item .title_holder {
+        top: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    .edrea_modalbox.opened .box_inner {
+        width: 500px;
+        width: 88vw;
+    }
+
+    .edrea_modalbox .close a {
+        width: 30px;
+        height: 30px;
+        border-radius: 3px;
+        display: block;
+        position: relative;
+        background-color: #000;
+    }
+
+    .edrea_about .about_in {
+        flex-direction: column;
+    }
+
+    .edrea_modalbox .close a:after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        transform: rotate(45deg);
+        background-color: #fff;
+        top: 14px;
+        left: 5px;
+    }
+
+    .edrea_modalbox .close a:before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        transform: rotate(-45deg);
+        background-color: #fff;
+        top: 14px;
+        left: 5px;
+    }
+
+    .edrea_modalbox .close .svg {
+        display: none;
+    }
+
+    .edrea_modalbox .close {
+        left: auto;
+        right: 20px;
+        top: 20px;
+        border: 2px solid transparent;
+        background-color: #fff;
+        border-radius: 3px;
+    }
+
+    .edrea_testi_slider .item_in {
+        padding: 30px 30px 30px 90px;
+    }
+
+    .edrea_testi_slider .icon {
+        left: 30px;
+        top: 30px;
+    }
+
+    .edrea_testi_slider .icon .svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .edrea_testi_slider .description {
+        margin-bottom: 20px;
+    }
+
+    .edrea_testi_slider .title {
+        padding-left: 80px;
+    }
+
+    .edrea_testi_slider .title h3 {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 2px;
+    }
+
+    .edrea_testi_slider .title p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .edrea_footer .content {
+        flex-direction: column;
+    }
+
+    .edrea_footer .footer_left {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .edrea_footer .footer_left p {
+        font-size: 15px;
+    }
+
+    .edrea_footer ul a .svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .edrea_footer ul li:first-child {
+        margin-left: 0;
+    }
+
+    .edrea_footer ul li {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .edrea_service_list .service_item {
+        padding: 30px 50px 30px 80px;
+    }
+
+    .edrea_service_list .icon {
+        left: 20px;
+    }
+
+    .edrea_service_list .arrow {
+        right: 20px;
+    }
+
+    .edrea_service_list h3 {
+        width: 100%;
+    }
+
+    .edrea_service_list p {
+        display: none;
+    }
+
+    .edrea_information .info_left li {
+        width: 100%;
+    }
+
+    .edrea_information .info_left li:nth-child(2) {
+        margin-top: 0;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+}
+
+body.dark .edrea_topbar ul li.button a {
+    border-color: #eee;
+}
+
+body.dark .edrea_topbar ul li.button a:hover {
+    border-color: rgb(221, 66, 66);
+}
