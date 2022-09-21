@@ -26,7 +26,7 @@
 li.info-tipos h5{
     line-height: 2;
 }
-.m-t{
+.m-4{
     margin-top: 4rem;
 }
 
@@ -1427,7 +1427,7 @@ body.dark .edrea_about {
     width: 100%;
     position: relative;
     background-color: #fff;
-    padding: 60px 50px 60px 150px;
+    padding: 50px;
     border-radius: 20px 20px 20px 0;
 }
 
@@ -2636,7 +2636,7 @@ body.intro .loader_line:after {
     }
 
     .edrea_testi_slider .item_in {
-        padding: 30px 30px 30px 90px;
+        padding: 30px;
     }
 
     .edrea_testi_slider .icon {
@@ -2697,7 +2697,7 @@ body.intro .loader_line:after {
 
 @media (max-width: 480px) {
     .edrea_service_list .service_item {
-        padding: 30px 50px 30px 80px;
+        padding: 30px;
     }
 
     .edrea_service_list .icon {
