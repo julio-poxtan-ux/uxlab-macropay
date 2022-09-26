@@ -35,7 +35,8 @@ li.info-tipos h5 {
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 5rem;
+    padding: 2rem;
+    grid-gap: 2rem;
     justify-content: center; 
 
 }
@@ -2380,6 +2381,9 @@ body.intro .loader_line:after {
     .edrea_title {
         max-width: 100%;
     }
+    .grid-container {
+        padding: 2rem;
+    }
 
     .edrea_mobile_menu {
         display: block;
@@ -2609,6 +2613,9 @@ body.intro .loader_line:after {
     body {
         font-size: 16px;
     }
+    .grid-container {
+        padding: 2rem;
+    }
 
     .edrea_modalbox.opened .box_inner {
         width: 500px;
@@ -2724,6 +2731,10 @@ body.intro .loader_line:after {
 }
 
 @media (max-width: 480px) {
+
+    .grid-container {
+        padding: 2rem;
+    }
     .edrea_service_list .service_item {
         padding: 30px;
     }
