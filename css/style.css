@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 
-/*	Copyright (c) 2022 ib-themes
+/*  Copyright (c) 2022 ib-themes
 
 
 .
@@ -9,12 +9,12 @@
 
 
 /*--------------------------------f-------------------
-/*	01) CORE CSS
+/*  01) CORE CSS
 /*---------------------------------------------------*/
 
 
 /*.edrea_hero.content-background {
-	 background-image: url("../img/banner/01.jpg");
+     background-image: url("../img/banner/01.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -23,12 +23,40 @@
 .edrea_checklist {
     margin-top: 3rem
 }
-li.info-tipos h5{
+
+li.info-tipos h5 {
     line-height: 2;
 }
-.m-4{
+
+.m-4 {
     margin-top: 4rem;
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 5rem;
+    justify-content: center; 
+
+}
+
+.item-left {
+    justify-content: center;
+    align-self: start;
+    justify-items: stretch;
+}
+
+.item-right {
+    justify-content: center;
+    align-self: start;
+    justify-items: stretch;
+}
+
+
+.item-left h2 {
+    padding-bottom: 2rem;
+}
+
 
 html {
     overflow-x: hidden;
@@ -508,7 +536,7 @@ h6 {
 
 .edrea_modalbox p {
     margin-bottom: 30px;
-    /*	text-align: justify;*/
+    /*  text-align: justify;*/
 }
 
 .edrea_modalbox .in_list {
@@ -647,7 +675,7 @@ h6 {
 }
 
 /*---------------------------------------------------*/
-/*	xx) TOPBAR
+/*  xx) TOPBAR
 /*---------------------------------------------------*/
 .edrea_topbar {
     position: fixed;
@@ -699,7 +727,7 @@ h6 {
 
 .edrea_topbar .logo img {
     /*max-width: 120px;
-	max-height: 70px;*/
+    max-height: 70px;*/
     width: 14vw;
 }
 
@@ -1057,7 +1085,7 @@ body.dark .edrea_about {
 }
 
 .edrea_services {
-    padding: 120px 0;
+    padding: 60px 0;
 }
 
 .edrea_services .content {
