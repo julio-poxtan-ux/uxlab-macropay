@@ -34,10 +34,10 @@ li.info-tipos h5 {
 
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 2rem;
-    grid-gap: 2rem;
-    justify-content: center; 
+    grid-template-columns: 2fr 1fr;
+    padding: 4rem;
+    grid-gap: 4rem;
+    justify-content: center;
 
 }
 
@@ -51,6 +51,7 @@ li.info-tipos h5 {
     justify-content: center;
     align-self: start;
     justify-items: stretch;
+    padding-top: 3rem;
 }
 
 
@@ -58,6 +59,14 @@ li.info-tipos h5 {
     padding-bottom: 2rem;
 }
 
+.list-grid-info li {
+    list-style-type: decimal;
+    padding: 16px;
+}
+
+::marker {
+    color: #FFDD00;
+}
 
 html {
     overflow-x: hidden;
@@ -2381,6 +2390,7 @@ body.intro .loader_line:after {
     .edrea_title {
         max-width: 100%;
     }
+
     .grid-container {
         padding: 2rem;
     }
@@ -2613,8 +2623,10 @@ body.intro .loader_line:after {
     body {
         font-size: 16px;
     }
+
     .grid-container {
         padding: 2rem;
+        grid-template-columns: 1fr;
     }
 
     .edrea_modalbox.opened .box_inner {
@@ -2735,6 +2747,7 @@ body.intro .loader_line:after {
     .grid-container {
         padding: 2rem;
     }
+
     .edrea_service_list .service_item {
         padding: 30px;
     }
