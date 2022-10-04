@@ -1,12 +1,6 @@
 @charset "utf-8";
 
-
 /*  Copyright (c) 2022 ib-themes
-
-
-.
-
-
 
 /*--------------------------------f-------------------
 /*  01) CORE CSS
@@ -68,7 +62,7 @@ li.info-tipos h5 {
     color: #FFDD00;
 }
 
-html {
+section # html {
     overflow-x: hidden;
     padding: 0px;
     margin: 0px;
@@ -651,7 +645,7 @@ h6 {
     position: absolute;
     height: 1px;
     z-index: 3;
-    background-color: #dd4242;
+    background-color: #ffdd04;
     transition: all 0.3s ease;
     opacity: 0;
 }
