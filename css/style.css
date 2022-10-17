@@ -196,27 +196,27 @@ h6 {
 }
 
 h1 {
-    font-size: 45px;
+    font-size: clamp(1.5rem, 8vw - 2rem, 2rem);
 }
 
 h2 {
-    font-size: 36px;
+    font-size: clamp(1.5rem, 8vw - 2rem, 3rem);
 }
 
 h3 {
-    font-size: 30px;
+    font-size: clamp(1.5rem, 8vw - 2rem, 3rem);
 }
 
 h4 {
-    font-size: 24px;
+    font-size: clamp(1.5rem, 8vw - 2rem, 1.8rem);
 }
 
 h5 {
-    font-size: 20px;
+    font-size: clamp(1.5rem, 8vw - 2rem, 1rem);
 }
 
 h6 {
-    font-size: 16px;
+    font-size: clamp(1.5rem, 8vw - 2rem, 3rem);
 }
 
 .edrea_wrapper {
